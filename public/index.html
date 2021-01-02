@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyChat</title>
+  <!--My styles -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="css/reset.css"></link>
+  <link rel="stylesheet" type="text/css" href="css/style.css"></link>
+  <link href="https://fonts.googleapis.com/css?family=Arsenal|Gudea|Monda|Varela+Round" rel="stylesheet"></link>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="tracker.js"></script> 
+
+</head> 
+
+<body>
+    <div id="prompt">
+        <div id="name-info">
+         Enter your name: </br>
+           <input id="name" style="height:35px;font-size:14pt;"/>
+           <button id="userButton" type="button" onclick="renameUser()">Track Me</button>
+        </div>
+    </div>
+
+
+
+
+  <script>
+
+   $(document).on('keypress', '#name' ,function(e) {
+     if(e.which == 13) {
+    
+      renameUser();
+
+     }
+    });
+
+
+  </script>
+
+</body>
+
+</html>
