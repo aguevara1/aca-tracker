@@ -23,7 +23,7 @@ function renameUser(){
             name: theName
             };
 
-       fetch('http://localhost:8000/clients', {
+       fetch('http://localhost:8080/clients', {
        // fetch('/clients', {
           method: "POST",
           mode: 'cors',
@@ -41,7 +41,7 @@ setInterval(function(){
   navigator.geolocation.getCurrentPosition(success, error, options);
 //let messagesDivForUser = document.getElementById('who')
 //let displayUser = '';
-fetch('http://localhost:8000/clients', {
+fetch('http://localhost:8080/clients', {
 //  fetch('/users', {
   method: "GET",
   mode: 'cors', 
@@ -96,7 +96,7 @@ fetch('http://localhost:8000/clients', {
      //  console.log('before doing post to locations', clients[currentId+5]);
        
 
-    fetch('http://localhost:8000/locations', {
+    fetch('http://localhost:8080/locations', {
       // fetch('/clients', {
          method: "POST",
          mode: 'cors',
@@ -114,7 +114,7 @@ fetch('http://localhost:8000/clients', {
     let messagesDiv = document.getElementById('messagesForDisplay')
     let displayMsg = '';
    // fetch('http://localhost:8080/messages')
-    fetch('http://localhost:8000/locations',{
+    fetch('http://localhost:8080/locations',{
     method: "GET",
     mode: 'cors', 
     headers: {
