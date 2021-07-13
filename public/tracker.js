@@ -23,8 +23,8 @@ function renameUser(){
             name: theName
             };
 
-       fetch('http://localhost:8080/clients', {
-       // fetch('/clients', {
+       //fetch('http://localhost:8080/clients', {
+        fetch('/clients', {
           method: "POST",
           mode: 'cors',
           headers: {"Content-Type": "application/json"},
@@ -41,8 +41,8 @@ setInterval(function(){
   navigator.geolocation.getCurrentPosition(success, error, options);
 //let messagesDivForUser = document.getElementById('who')
 //let displayUser = '';
-fetch('http://localhost:8080/clients', {
-//  fetch('/users', {
+// fetch('http://localhost:8080/clients', {
+  fetch('/clients', {
   method: "GET",
   mode: 'cors', 
   headers: {
@@ -96,8 +96,8 @@ fetch('http://localhost:8080/clients', {
      //  console.log('before doing post to locations', clients[currentId+5]);
        
 
-    fetch('http://localhost:8080/locations', {
-      // fetch('/clients', {
+    //fetch('http://localhost:8080/locations', {
+       fetch('/locations', {
          method: "POST",
          mode: 'cors',
          headers: {"Content-Type": "application/json"},
@@ -114,7 +114,7 @@ fetch('http://localhost:8080/clients', {
     let messagesDiv = document.getElementById('messagesForDisplay')
     let displayMsg = '';
    // fetch('http://localhost:8080/messages')
-    fetch('http://localhost:8080/locations',{
+    fetch('/locations',{
     method: "GET",
     mode: 'cors', 
     headers: {
