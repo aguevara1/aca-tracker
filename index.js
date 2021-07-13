@@ -10,7 +10,7 @@ let locationRoutes=require("./routes/location.js");
 app.use(clientRoutes);
 app.use(locationRoutes);
  
-
+/*
 const thePort = 8000;
 app.listen(thePort, (err) => {
  if (err) {
@@ -19,13 +19,14 @@ app.listen(thePort, (err) => {
  console.log("Web server is now listening for messages on port",thePort);
 
 });
+*/
 
 
-/*
-let port = 8080;
- if (port == null || port == "") {
+let port = process.env.PORT || 8080;
+/* if (port == null || port == "") {
   port = 3000;
-}  
+}  */
+
 app.listen(port);
 
-*/
+
