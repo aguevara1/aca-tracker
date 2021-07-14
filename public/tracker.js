@@ -55,7 +55,7 @@ setInterval(function(){
          userData.long=longi;
          clients.push(userData);
          temObject=JSON.parse(JSON.stringify(userData));
-
+    
             currentId=userData.clientId;
         console.log('This is the currentId',currentId);
         
@@ -89,10 +89,10 @@ setInterval(function(){
   };
 
   function postToLocations(){
-      let tempObj={};
+    //  let tempObj={};
       
       //clients doesn't have clientId or name, they are null, this part not working
-       tempObj=clients[currentId];
+    //   tempObj=clients[currentId];
      //  console.log('before doing post to locations', clients[currentId+5]);
        
 
@@ -103,7 +103,8 @@ setInterval(function(){
          headers: {"Content-Type": "application/json"},
          body: JSON.stringify(temObject) 
         })
-            // displayMessages();
+          
+        console.log('checking longitude and latitude', temObject);
   }
 
   // Working on this to display on webpage users with username,lat,long
@@ -113,7 +114,7 @@ setInterval(function(){
     setInterval(function(){ 
     let messagesDiv = document.getElementById('messagesForDisplay')
     let displayMsg = '';
-   // fetch('http://localhost:8080/messages')
+  
     fetch('/locations',{
     method: "GET",
     mode: 'cors', 

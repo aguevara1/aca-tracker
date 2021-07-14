@@ -40,13 +40,15 @@ let userInfo={};
       //  console.log(typeof data);
        // anotherObj=JSON.parse(data);
         //  console.log('this is the data', data);
-        obj.lat =data.lat;
-        obj.long =data.lon;
-        obj.location =data.address;
+        userInfo.lat =data.lat;
+        userInfo.long =data.lon;
+        userInfo.location =data.address;
+         console.log('checking the address', data.address);
 
         // ****** userinfo has clientId, name, lat and long already, just adding address 
-        userInfo.location=data.address;
-   
+       // userInfo.location=data.address;
+        
+
          // adding objects to Array to send back
         arrayOfObjects.push(userInfo);
            count=arrayOfObjects.length;
