@@ -76,6 +76,8 @@ setInterval(function(){
     var crd = pos.coords;   
     lati=crd.latitude;
     longi=crd.longitude;
+    console.log('this is crd.latitude', crd.latitude);
+    console.log('this is crd.longitude', crd.longitude);
   }
 
   function error(err) {
