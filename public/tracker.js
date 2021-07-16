@@ -39,9 +39,25 @@ setInterval(function(){
 //function listUsers(){
 
   navigator.geolocation.getCurrentPosition(success, error, options);
-//let messagesDivForUser = document.getElementById('who')
-//let displayUser = '';
-// fetch('http://localhost:8080/clients', {
+
+  function success(pos) {
+    var crd = pos.coords;   
+    lati=crd.latitude;
+    longi=crd.longitude;
+    console.log('this is crd.latitude', crd.latitude);
+    console.log('this is crd.longitude', crd.longitude);
+  } 
+
+  function error(err) {
+    console.warn(`ERROR(${err.code}): ${err.message}`);
+  }
+
+  var options = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0
+  };
+
   fetch('/clients', {
   method: "GET",
   mode: 'cors', 
@@ -72,23 +88,7 @@ setInterval(function(){
 }, 1000)
 
  
-  function success(pos) {
-    var crd = pos.coords;   
-    lati=crd.latitude;
-    longi=crd.longitude;
-    console.log('this is crd.latitude', crd.latitude);
-    console.log('this is crd.longitude', crd.longitude);
-  }
 
-  function error(err) {
-    console.warn(`ERROR(${err.code}): ${err.message}`);
-  }
-
-  var options = {
-    enableHighAccuracy: true,
-    timeout: 5000,
-    maximumAge: 0
-  };
 
   function postToLocations(){
     //  let tempObj={};
