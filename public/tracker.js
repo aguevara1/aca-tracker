@@ -85,7 +85,7 @@ setInterval(function(){
       }) 
 
    postToLocations();  
-}, 1000)
+}, 2000)
 
  
 
