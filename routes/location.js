@@ -63,7 +63,7 @@ let userInfo={};
      
 
 
-       console.log('this is the uniqueObjects count', uniqueObjects.length);
+     console.log('this is the uniqueObjects count', uniqueObjects.length);
      console.log('these are the objects in uniqueObjects', uniqueObjects);
         
                   

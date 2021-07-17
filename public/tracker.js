@@ -42,10 +42,10 @@ setInterval(function(){
 
   function success(pos) {
     var crd = pos.coords;   
-    lati=crd.latitude;
-    longi=crd.longitude;
-    console.log('this is crd.latitude', crd.latitude);
-    console.log('this is crd.longitude', crd.longitude);
+    lati=pos.coords.latitude;
+    longi=pos.coords.longitude;
+    console.log('this is lati', lati);
+    console.log('this is longi', longi);
   } 
 
   function error(err) {
@@ -91,12 +91,7 @@ setInterval(function(){
 
 
   function postToLocations(){
-    //  let tempObj={};
-      
-      //clients doesn't have clientId or name, they are null, this part not working
-    //   tempObj=clients[currentId];
-     //  console.log('before doing post to locations', clients[currentId+5]);
-       
+   
 
     //fetch('http://localhost:8080/locations', {
        fetch('/locations', {
