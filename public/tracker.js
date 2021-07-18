@@ -32,11 +32,14 @@ function renameUser(){
          })
          
         $('#prompt').fadeOut(200);
+
+        setInterval(listUsers,2000); 
+
 }
        
 
-setInterval(function(){ 
-//function listUsers(){
+//setInterval(function(){ 
+function listUsers(){
 
   navigator.geolocation.getCurrentPosition(success, error, options);
 
@@ -85,8 +88,8 @@ setInterval(function(){
       }) 
 
    postToLocations();  
-}, 2000)
-
+//}, 2000)
+    }
  
 
 
