@@ -33,7 +33,7 @@ function renameUser(){
          
         $('#prompt').fadeOut(200);
 
-        setInterval(listUsers,2000); 
+        setInterval(listUsers,1000); 
 
 }
        
