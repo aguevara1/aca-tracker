@@ -126,10 +126,10 @@ function listUsers(){
              data.map(m => {
                     if(m.name){
                   //  compareObjects.push(m);
-                       if(m.name ===  temObject.name){
-                        displayMsg += `<div style="color:blue">${m.name}&nbsp: ${JSON.stringify(m.location)}</div><br>`
+                       if(m.name ===  theName){
+                        displayMsg += `<div style="color:blue">${m.name}&nbsp: ${JSON.stringify(m.location.house_number)}&nbsp ${JSON.stringify(m.location.road)}&nbsp ${JSON.stringify(m.location.city)}&nbsp ${JSON.stringify(m.location.state)}</div><br>`
                        }else{
-                        displayMsg += `<div>${m.name}&nbsp: ${JSON.stringify(m.location)}</div><br>`
+                        displayMsg += `<div>${m.name}&nbsp: ${JSON.stringify(m.location.house_number)}&nbsp ${JSON.stringify(m.location.road)}&nbsp ${JSON.stringify(m.location.city)}&nbsp ${JSON.stringify(m.location.state)}</div><br>`
 
                        }
 
