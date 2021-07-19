@@ -50,7 +50,7 @@ function listUsers(){
     console.log('this is lati', lati);
     console.log('this is longi', longi);
   } 
-
+ 
   function error(err) {
     console.warn(`ERROR(${err.code}): ${err.message}`);
   }
@@ -58,7 +58,7 @@ function listUsers(){
   var options = {
     enableHighAccuracy: true,
     timeout: 5000,
-    maximumAge: 0
+    maximumAge: 10000
   };
 
   fetch('/clients', {
@@ -91,11 +91,7 @@ function listUsers(){
 //}, 2000)
     }
  
-
-
   function postToLocations(){
-   
-
     //fetch('http://localhost:8080/locations', {
        fetch('/locations', {
          method: "POST",
@@ -128,15 +124,16 @@ function listUsers(){
         .then(data => { 
            console.log('data after GET', data);
              data.map(m => {
-                  if(m.name){
+                    if(m.name){
                   //  compareObjects.push(m);
+                       if(m.name ===  temObject.name){
+                        displayMsg += `<div style="color:blue">${m.name}&nbsp: ${JSON.stringify(m.location)}</div><br>`
+                       }else{
+                        displayMsg += `<div>${m.name}&nbsp: ${JSON.stringify(m.location)}</div><br>`
 
+                       }
 
-              //  var my_obj_str = JSON.stringify(m.location});
-                // if(JSON.stringify(m.location))
-                  displayMsg += `<div>${m.name}&nbsp: ${JSON.stringify(m.location)}</div><br>`
-                     
-                }
+                    }
               })
   
              var newMessage= displayMsg.replace('<div>Guest&nbsp: Joined</div><br>', ''); 
