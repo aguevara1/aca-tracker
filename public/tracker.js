@@ -40,16 +40,16 @@ function renameUser(){
 
 //setInterval(function(){ 
 function listUsers(){
+    if(navigator.geolocation){
+      navigator.geolocation.getCurrentPosition(success, error, options);
 
-  navigator.geolocation.getCurrentPosition(success, error, options);
-
-  function success(pos) {
-    var crd = pos.coords;   
-    lati=pos.coords.latitude;
-    longi=pos.coords.longitude;
-    console.log('this is lati', lati);
-    console.log('this is longi', longi);
-  } 
+      function success(pos) {
+      var crd = pos.coords;   
+      lati=pos.coords.latitude;
+      longi=pos.coords.longitude;
+      console.log('this is lati', lati);
+      console.log('this is longi', longi);
+      } 
  
   function error(err) {
     console.warn(`ERROR(${err.code}): ${err.message}`);
@@ -60,6 +60,9 @@ function listUsers(){
     timeout: 5000,
     maximumAge: 10000
   };
+} else{
+  alert("Geolocation is not supported by this browser.");
+}
 
   fetch('/clients', {
   method: "GET",
