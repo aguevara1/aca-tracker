@@ -130,9 +130,9 @@ function listUsers(){
                     if(m.name){
                   //  compareObjects.push(m);
                        if(m.name ===  theName){
-                        displayMsg += `<div style="color:blue">${m.name}&nbsp: ${JSON.stringify(m.location.house_number)}&nbsp ${JSON.stringify(m.location.road)}&nbsp ${JSON.stringify(m.location.city)}&nbsp ${JSON.stringify(m.location.state)}</div><br>`
+                        displayMsg += `<div style="color:blue">${m.name}&nbsp IS AT THIS LOCATION: ${JSON.stringify(m.location.house_number)}&nbsp ${JSON.stringify(m.location.road)}&nbsp ${JSON.stringify(m.location.city)}&nbsp ${JSON.stringify(m.location.state)}</div><br>`
                        }else{
-                        displayMsg += `<div>${m.name}&nbsp: ${JSON.stringify(m.location.house_number)}&nbsp ${JSON.stringify(m.location.road)}&nbsp ${JSON.stringify(m.location.city)}&nbsp ${JSON.stringify(m.location.state)}</div><br>`
+                        displayMsg += `<div>${m.name}&nbsp IS AT THIS LOCATION:: ${JSON.stringify(m.location.house_number)}&nbsp ${JSON.stringify(m.location.road)}&nbsp ${JSON.stringify(m.location.city)}&nbsp ${JSON.stringify(m.location.state)}</div><br>`
 
                        }
 
